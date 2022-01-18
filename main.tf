@@ -126,4 +126,8 @@ resource "azurerm_application_gateway" "appgw" {
   }
 
   tags = var.tags
+
+  lifecycle {
+    ignore_changes = [tags]
+  }
 }
